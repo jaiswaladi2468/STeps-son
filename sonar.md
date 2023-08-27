@@ -29,7 +29,9 @@ sudo chmod 666 /var/run/docker.sock
 sudo systemctl restart docker
 
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+
 docker ps
+
 Access sonar IP:9000
 
 user/pass   admin/admin
