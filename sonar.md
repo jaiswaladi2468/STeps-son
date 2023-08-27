@@ -19,9 +19,13 @@ echo \
   sudo apt install docker-compose -y
   
 service docker restart
+
 sudo usermod -aG docker $USER
+
 newgrp docker
+
 sudo chmod 666 /var/run/docker.sock
+
 sudo systemctl restart docker
 
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
